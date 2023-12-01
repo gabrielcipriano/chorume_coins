@@ -179,6 +179,6 @@ class GenericCommand
             return;
         }
 
-        $interaction->respondWithMessage(MessageBuilder::new()->setContent(sprintf("Você transferiu **%s** coins para <@%s>! :money_mouth: :money_mouth: :money_mouth:", $coins, $toDiscordId)), true);
+        $interaction->respondWithMessage(MessageBuilder::new()->setContent(sprintf("<@%s> transferiu **%s** coins para <@%s>! :money_mouth: :money_mouth: :money_mouth:", $fromDiscordId, $coins, $toDiscordId)), false);
     }
 }
